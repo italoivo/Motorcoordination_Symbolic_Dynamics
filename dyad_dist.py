@@ -238,7 +238,6 @@ for folder in folders:
             for window in time_windows:
                 corr_matrix.append(np.corrcoef(window, rowvar=False))
             corr_matrix = np.array(corr_matrix)
-            corr_matrix = corr_matrix - np.mean(corr_matrix,axis=0)
             corr_matrices[filename] = corr_matrix
         print('correlation matrices calculated.')
 
